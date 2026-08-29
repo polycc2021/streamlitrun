@@ -3,7 +3,7 @@ name: Streamlit App Keep-Alive
 on:
   schedule:
     # 每 4 小时自动触发运行一次
-    - cron: '0 */4 * * *'
+    - cron: '0 */1 * * *'
   workflow_dispatch:
 
 jobs:
