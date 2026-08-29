@@ -4,7 +4,7 @@ on:
   schedule:
     # 每 4 小时自动触发运行一次
     - cron: '0 */4 * * *'
-  workflow_dispatch: # 支持在 GitHub 页面手动点击运行测试
+  workflow_dispatch:
 
 jobs:
   keep-alive:
@@ -31,5 +31,7 @@ jobs:
       - name: Run Keep-Alive Script
         env:
           STREAMLIT_APP_URL: ${{ secrets.STREAMLIT_APP_URL }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
           python streamlit_wakeup.py
