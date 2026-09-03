@@ -58,7 +58,7 @@ def run():
                 print(msg)
                 send_telegram_msg(msg)
             else:
-                msg = f"✅ *Streamlit 保活巡检正常*\n\n应用当前正常在线运行中，无需唤醒。\n🔗 *链接*: {APP_URL}"
+                msg = f"✅ *Stream 巡检正常*\n\n应用当前正常在线运行中，无需唤醒。\n🔗 *链接*: {APP_URL}"
                 print(msg)
                 send_telegram_msg(msg)
 
